@@ -6,7 +6,7 @@ const { getUserTaskSummaries } = require("../dist/index.js");
  */
 getUserTaskSummaries()
   .then((result) => {
-    console.log(JSON.stringify(result, null, 2));
+    console.log("Task Summaries processed!");
   })
   .catch((error) => {
     console.error(error);
