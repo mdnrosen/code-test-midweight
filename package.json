@@ -1,0 +1,14 @@
+{
+  "name": "code-test-c4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node scripts/run.js",
+    "test": "node --test scripts/tests.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
