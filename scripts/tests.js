@@ -1,6 +1,6 @@
 const assert = require("node:assert/strict");
 const { test, beforeEach, afterEach } = require("node:test");
-const { getUserTaskSummaries } = require("../index.js");
+const { getUserTaskSummaries } = require("../dist/index.js");
 
 const USERS_URL = "https://jsonplaceholder.typicode.com/users";
 const TASKS_URL = "https://jsonplaceholder.typicode.com/todos";

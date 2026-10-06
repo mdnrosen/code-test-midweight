@@ -1,4 +1,4 @@
-const { getUserTaskSummaries } = require("../index.js");
+const { getUserTaskSummaries } = require("../dist/index.js");
 
 /**
  * Provided runner: no changes needed here.

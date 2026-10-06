@@ -2,13 +2,18 @@
   "name": "code-test-c4",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "dev": "node scripts/run.js",
-    "test": "node --test scripts/tests.js"
+    "build": "tsc",
+    "dev": "npm run build && node scripts/run.js",
+    "test": "npm run build && node --test scripts/tests.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
 }
