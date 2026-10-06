@@ -14,20 +14,9 @@ Use Node.js 18 or later and run `node scripts/run.js`. The provided runner handl
 ## Requirements
 
 1. Fetch both datasets asynchronously.
-2. Match each user's `id` to their todos' `userId`.
-3. Count their completed todos as `completedCount`.
-4. Collect the titles of their uncompleted todos as `pendingTasks`.
-5. Set `displayName` to the user's `name` followed by their `company.name` in parentheses, for example `"Leanne Graham (Romaguera-Crona)"`. Every supplied user has a company name.
+2. Associate each user with their tasks.
+3. Include each user's identifier and a display label containing their name followed by their company name in parentheses. eg. "Joe Bloggs (Sainsbury's)"
+4. Include the number of completed tasks for each user.
+5. Include a list of the titles of their outstanding tasks.
 
-## Output
-
-Return an array with this shape, using the user's `id` for `userId`:
-
-```typescript
-interface UserTaskSummary {
-  userId: number;
-  displayName: string;
-  completedCount: number;
-  pendingTasks: string[];
-}
-```
+Return an array containing one summary per user.
