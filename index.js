@@ -8,7 +8,7 @@ const TASKS_URL = "https://jsonplaceholder.typicode.com/todos";
  *
  * @returns {Promise<Array<{
  *   userId: number,
- *   fullName: string,
+ *   displayName: string,
  *   completedCount: number,
  *   pendingTasks: string[]
  * }>>}
