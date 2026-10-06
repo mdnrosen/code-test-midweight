@@ -5,8 +5,8 @@ const { getUserTaskSummaries } = require("../index.js");
 const USERS_URL = "https://jsonplaceholder.typicode.com/users";
 const TASKS_URL = "https://jsonplaceholder.typicode.com/todos";
 
-const users = require("../users.json");
-const tasks = require("../todos.json");
+const users = require("../data/users.json");
+const tasks = require("../data/todos.json");
 
 let originalFetch;
 let requestedUrls;
@@ -45,7 +45,7 @@ test("summarises Leanne Graham and Ervin Howell's tasks correctly", async () => 
     [
       {
         userId: 1,
-        fullName: "Leanne Graham",
+        displayName: "Leanne Graham (Romaguera-Crona)",
         completedCount: 11,
         pendingTasks: [
           "delectus aut autem",
@@ -61,7 +61,7 @@ test("summarises Leanne Graham and Ervin Howell's tasks correctly", async () => 
       },
       {
         userId: 2,
-        fullName: "Ervin Howell",
+        displayName: "Ervin Howell (Deckow-Crist)",
         completedCount: 8,
         pendingTasks: [
           "suscipit repellat esse quibusdam voluptatem incidunt",
@@ -83,14 +83,14 @@ test("summarises Leanne Graham and Ervin Howell's tasks correctly", async () => 
   );
 });
 
-test("matches every user's name, completed count, and pending task titles", async () => {
+test("matches every user's display name including company, completed count, and pending task titles", async () => {
   const result = await getUserTaskSummaries();
   const completedCounts = [11, 8, 7, 6, 12, 6, 9, 11, 8, 12];
 
   users.forEach((user, index) => {
     assert.deepEqual(result[index], {
       userId: user.id,
-      fullName: user.name,
+      displayName: `${user.name} (${user.company.name})`,
       completedCount: completedCounts[index],
       pendingTasks: tasks.filter((task) => task.userId === user.id && !task.completed).map((task) => task.title),
     });

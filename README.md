@@ -17,15 +17,16 @@ Use Node.js 18 or later and run `node scripts/run.js`. The provided runner handl
 2. Match each user's `id` to their todos' `userId`.
 3. Count their completed todos as `completedCount`.
 4. Collect the titles of their uncompleted todos as `pendingTasks`.
+5. Set `displayName` to the user's `name` followed by their `company.name` in parentheses, for example `"Leanne Graham (Romaguera-Crona)"`. Every supplied user has a company name.
 
 ## Output
 
-Return an array with this shape, using the user's `id` for `userId` and `name` for `fullName`:
+Return an array with this shape, using the user's `id` for `userId`:
 
 ```typescript
 interface UserTaskSummary {
   userId: number;
-  fullName: string;
+  displayName: string;
   completedCount: number;
   pendingTasks: string[];
 }
