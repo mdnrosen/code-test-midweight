@@ -34,3 +34,10 @@ export interface Todo {
   title: string;
   completed: boolean;
 }
+
+export interface UserSummary {
+  completedCount: number;
+  fullName: string;
+  pendingTasks: string[];
+  userId: number;
+}
