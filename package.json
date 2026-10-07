@@ -6,14 +6,16 @@
   "scripts": {
     "build": "tsc",
     "dev": "npm run build && node scripts/run.js",
-    "test": "npm run build && node --test scripts/tests.js"
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "@types/node": "^26.6.4",
-    "typescript": "^7.0.2"
+    "msw": "^3.0.2",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
   }
 }
