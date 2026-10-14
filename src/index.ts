@@ -3,7 +3,6 @@ const TASKS_URL = "https://jsonplaceholder.typicode.com/todos";
 
 /** Implement the challenge here. Define a specific result type instead of any. */
 function getUserTaskSummaries(): any {
-  // Your code here
   return [];
 }
 
